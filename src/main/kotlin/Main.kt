@@ -1,23 +1,10 @@
-import java.util.Scanner
-
 fun main() {
-    val input = Scanner(System.`in`)
     print("Masukkan Angka: ")
-    val number = input.nextInt()
-    var isPrime = true
+    val number = readLine()?.toInt()
 
-    if (number < 2) {
-        isPrime = false
-    } else {
-        for (i in 2 until number) {
-            if (number % i == 0) {
-                isPrime = false
-                break
-            }
-        }
-    }
+    val primeNumber = BIlanganPrima(number ?: 0)
 
-    if (isPrime) {
+    if (primeNumber.isPrime()) {
         println("$number adalah bilangan prima")
     } else {
         println("$number bukan bilangan prima")
