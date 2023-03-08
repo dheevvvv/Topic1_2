@@ -1,5 +1,5 @@
-class BIlanganPrima(val number:Int) {
-    fun isPrime(): Boolean {
+class BIlanganPrima(number:Int):Number(number) {
+    override fun isPrime(): Boolean {
         if (number < 2) {
             return false
         }
